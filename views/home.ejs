@@ -1,0 +1,70 @@
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
+">
+    <script src="/scripts/script.js"></script>
+
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <form action="/delete-tasks" method="POST" id="tasks-list-form" class="affichage">
+        <ul>
+            <% for(let i of tasks_list) {%>
+                <li>
+                    <input id="check" type="checkbox" name="id" value="<%= i.id %>">
+
+                    <div>
+                        <h4>
+                            <%= i.category %>
+                        </h4>
+                        <pre><%= i.description %></pre>
+                        <div>
+                            <span><i class="fa fa-calendar"></i>
+                                <%= i.date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short",
+                                    day:"numeric"}) %>
+                            </span>
+                            <span><i class="fa fa-user-circle-o"></i>
+                                <%= i.name %>
+                            </span>
+                        </div>
+                    </div>
+
+
+                </li>
+                <%}%>
+        </ul>
+    </form>
+    <div class="inputs">
+
+        <form action="/createtask" method="post">
+            <input type="text" name="name" id="" placeholder="name">
+            <input type="text" name="description" placeholder="description">
+            <input type="date" name="date">
+            <select name="category" id="">
+                <option value="0" selected>categorie ...</option>
+                <option value="math">math</option>
+                <option value="sport" selected>sport</option>
+                <option value="school" selected>school</option>
+                <option value="web developpment" selected>web developpment</option>
+
+            </select>
+            <button type="submit">Add</button>
+            <button id="delete-button" type="submit" form="tasks-list-form">
+                <i class="fas fa-trash-alt"></i>
+                <span>Delete Tasks</span>
+            </button>
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

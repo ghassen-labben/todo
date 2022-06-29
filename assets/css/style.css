@@ -1,0 +1,62 @@
+li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 50vw;
+    height: 20vh;
+    border-radius: 5px;
+
+}
+
+ul {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-self: center;
+    width: 100%;
+
+}
+
+#check {
+    margin-top: -90px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.affichage {
+    width: 60vw;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.inputs {
+    width: 70vw;
+    margin: auto;
+    margin-top: -30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.inputs input {
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select {
+    border: 0;
+}
+
+span {
+    color: #3282B8;
+}
+
+h4 {
+    text-transform: capitalize;
+    color: #2D4059 !important;
+}
+
+pre {
+    color: #E84545;
+}
